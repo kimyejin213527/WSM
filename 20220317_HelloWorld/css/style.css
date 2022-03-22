@@ -1,0 +1,16 @@
+    /*--우선 순위: TAG < CLASS < id -->
+    <!--같은 급일 때는 위 -->  아래 -->
+            */
+            li{
+                color: teal;
+            }
+            .korea{
+                color: crimson !important;
+            }
+            .incheon{
+                color: darkblue;
+            }
+            #leader{
+                color: violet;
+
+            }
