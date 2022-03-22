@@ -5,6 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>헬로월드</title>
+    <style>
+        <!--우선 순위: TAG < CLASS < id -->
+        <!--같은 급일 때는 위 -->  아래 -->
+        li{
+            color: teal;
+        }
+        .korea{
+            color: crimson !important;
+        }
+        .incheon{
+            color: darkblue;
+        }
+        #leader{
+            color: violet;
+
+        }
+    </style>
 </head>
 <body>
     <ul>
@@ -16,8 +33,8 @@
     </ul>
     <ul>
         <li class = "korea" id = "leader">유진</li>
-        <li class = "korea">원영</li>
-        <li class = "korea">가을</li>
+        <li class = "korea" style="color: pink">원영</li>
+        <li class = "korea incheon">가을</li>
         <li class = "japan">레이</li>
         <li class = "korea">리즈</li>
         <li class = "korea">이서</li>
