@@ -6,6 +6,9 @@ body > li {
   /* > 자식, 띄어쓰기는 자손 */
   color: teal;
 }
+ul:last-child {
+  background-color: pink;
+}
 .incheon {
   color: darkblue;
 }
@@ -28,4 +31,8 @@ h2 + h3 {
 h2 ~ h3 {
   /*h2형제 중 여러 h3*/
   font-size: 40px;
+}
+body > ul > ul:nth-child(2) {
+  /* 찾는 요소 우클릭 > 검사 > 개발자도구 > 우클릭 > copy > copy selector */
+  background-color: pink;
 }
