@@ -22,6 +22,9 @@ h6 {
 }
 li:nth-child(4) {
   /*1부터 시작*/
+  /* nth-child(n):n번째 자식
+  first-child: 첫째
+  last-child: 마지막 */
   text-decoration: underline;
 }
 h2 + h3 {
@@ -35,4 +38,10 @@ h2 ~ h3 {
 body > ul > ul:nth-child(2) {
   /* 찾는 요소 우클릭 > 검사 > 개발자도구 > 우클릭 > copy > copy selector */
   background-color: pink;
+}
+.japan {
+  text-decoration: underline;
+}
+ul:nth-child(2) > li:nth-child(3) {
+  text-decoration: underline;
 }
