@@ -2,10 +2,32 @@
     --red:crimson;
     --yelloow: gold;
     --green: yellowgreen;
+    --font-color: #333;
+    
 }
 
 *{
     box-sizing: border-box; /*크기 계산의 기준을 contents -> border*/
     margin: 0;
     padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration-line: none;
+    color: var(--font-color);
+
+}
+
+header{
+    --border-width: 4px;
+}
+
+.nav-list{
+    border: var(--border-width) solid var(--yelloow);
+}
+.nav-list li{
+    border: var(--border-width) solid var(--green);
 }
