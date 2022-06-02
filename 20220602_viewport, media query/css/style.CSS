@@ -1,0 +1,19 @@
+body{
+    background-color: #81bef7;
+    font-size: 4rem;
+}
+
+/**/
+@media screen and (max-width: 1023px){
+    body{
+        background-color: darkseagreen;
+    }
+}
+
+
+@media screen and (max-width: 419px){
+    body{
+        background-color: lightcoral;
+        font-size: 1rem;
+    }
+}
