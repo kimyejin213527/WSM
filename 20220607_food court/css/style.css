@@ -1,36 +1,40 @@
-/*Google Fonts*/
+/* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
-/*Varables CSS*/
+
+/* Varables Css */
 :root{
-    /*color*/
-    --first-color: hsl(160, 100%, 25%);
-    --first-color-bright: hsl(160, 100%, 25%);
-    --second-color: hsl(339, 77%, 59%);
-    --third-color:hsl(42, 87%, 52%);
+    /* color */
+    --first-color: hsl(160, 100%, 25%); /*008156*/
+    --first-color: hsl(160, 100%, 40%); 
+    --second-color: hsl(339, 77%,59%);
+    --third-color: hsl(42, 87%, 52%);
     --title-color: hsl(160, 0%, 0%);
     --text-color: hsl(160, 0%, 47%);
     --body-color: #fff;
     --container-color: #fff;
-    /*font*/
+
+    /* font */
     --body-font: 'Noto Sans KR', sans-serif;
-    --biggest-font: 2.25rem;
-    --h1-font-size: 2rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
+    --biggest-font-size: 2.25rem; /*36px*/
+    --h1-font-size: 2rem; /*32*/
+    --h2-font-size: 1.5rem; /*24*/
+    --h3-font-size: 1.25rem; /*20px*/
+    --normal-font-size: 1rem; /*16px*/
     --small-font-size: .8rem;
     --smaller-font-size: .75rem;
-    /*font weight*/
+
+    /* font weight */
     --font-medium: 500;
     --font-bold: 700;
-    /*z-index*/
+
+    /* z-index */
     --z-index: 100;
 }
-/*BASE*/
-* {
+/* BASE */
+*{
     box-sizing: border-box;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 body{
     position: relative;
@@ -48,19 +52,80 @@ h3{
 ul{
     list-style: none;
 }
+a{
+    text-decoration: none;
+}
 img{
     max-width: 100%;
-    display: block;
-    margin: 0 auto;
+    height: auto;
 }
-/*nav*/
+
+/* nav */
 .container{
-    margin-left: 1rem;
-    margin-right: 1rem;;
+    margin-left: 0.875rem;
+    margin-right: 0.875rem;
 }
-/*breakpoints*/
-/*2K & 4K*/
+header {
+    background-color: var(--first-color);
+}
+nav {
+    height: 44px;
+    display: flex; /*기본값 : 수평 방향*/
+    justify-content: space-between; /* 양쪽정렬 */
+    align-items: center;/* 교차축 가운데 */
+}
+nav i {
+    color: #fff;
+    font-size: var(--h3-font-size);/*아이콘 크기 크게*/
+}
+.nav-toggle {
+    display: none;/*안 보이게 하자*/
+}
+.nav-list {
+    display: flex;/*기본값 : 수평방향*/
+    column-gap: 1.25rem;
+}
+.nav-link {
+    color: #fff;
+}
 
-/*tablet*/
+/* breakpoints */
+/* 2K & 4K */
 
-/*mobile*/
+/* tablet css header>nav tablet*/
+@media screen and (max-width: 600px){/* width가 600px 이하면 아래 css 적용*/
+    .nav-toggle{
+        display: block;
+        cursor: pointer;
+        position: absolute;/* (메뉴)위치 무시, 로고 가운데 정렬 */
+    }
+    .nav-logo{
+        margin: 0 auto;/* 로고 가운데 정렬 */
+    }
+    .nav-list{
+        position: absolute;
+        top: 44px;
+        left: 0;
+        /* width: 100%; */
+        right: 0;
+        flex-direction: column;
+        background-color: lightgray;
+        height: 0;
+        overflow:hidden;
+        transition: 0.5s;
+    }
+    .nav-item{
+        padding: .5rem 1rem;/* 위 오 아 왼*/
+        text-align: center;/*가운데 정렬*/
+        border-bottom: 2px solid white;/* 아래 선 */
+    }
+    .nav-link{
+        color: var(--title-color);
+        display: block; /* 링크의 너비: 컨텐츠 -> nav-item 만큼 늘리자 */
+    }
+    .show-menu{
+        height: 164px;
+    }
+
+}
+/* mobile */
