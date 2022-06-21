@@ -2,11 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
 
 /* Varables Css */
-:root{
+:root {
     /* color */
-    --first-color: hsl(160, 100%, 25%); /*008156*/
-    --first-color: hsl(160, 100%, 40%); 
-    --second-color: hsl(339, 77%,59%);
+    --first-color: hsl(160, 100%, 25%);
+    /*008156*/
+    --first-color: hsl(160, 100%, 40%);
+    --second-color: hsl(339, 77%, 59%);
     --third-color: hsl(42, 87%, 52%);
     --title-color: hsl(160, 0%, 0%);
     --text-color: hsl(160, 0%, 47%);
@@ -15,11 +16,16 @@
 
     /* font */
     --body-font: 'Noto Sans KR', sans-serif;
-    --biggest-font-size: 2.25rem; /*36px*/
-    --h1-font-size: 2rem; /*32*/
-    --h2-font-size: 1.5rem; /*24*/
-    --h3-font-size: 1.25rem; /*20px*/
-    --normal-font-size: 1rem; /*16px*/
+    --biggest-font-size: 2.25rem;
+    /*36px*/
+    --h1-font-size: 2rem;
+    /*32*/
+    --h2-font-size: 1.5rem;
+    /*24*/
+    --h3-font-size: 1.25rem;
+    /*20px*/
+    --normal-font-size: 1rem;
+    /*16px*/
     --small-font-size: .8rem;
     --smaller-font-size: .75rem;
 
@@ -30,82 +36,113 @@
     /* z-index */
     --z-index: 100;
 }
+
 /* BASE */
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     position: relative;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     color: var(--text-color);
     background-color: var(--body-color);
 }
+
 h1,
 h2,
-h3{
+h3 {
     color: var(--title-color);
     font-weight: var(--font-bold);
 }
-ul{
+
+ul {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
-img{
+
+img {
     max-width: 100%;
     height: auto;
 }
 
 /* nav */
-.container{
+.container {
     margin-left: 0.875rem;
     margin-right: 0.875rem;
 }
+
 header {
     background-color: var(--first-color);
-    position: fixed; /*스크롤 헤더 위치 고정*/
+    position: fixed;
+    /*스크롤 헤더 위치 고정*/
     left: 0;
     right: 0;
+    top: 0;
 }
+
 nav {
     height: 44px;
-    display: flex; /*기본값 : 수평 방향*/
-    justify-content: space-between; /* 양쪽정렬 */
-    align-items: center;/* 교차축 가운데 */
+    display: flex;
+    /*기본값 : 수평 방향*/
+    justify-content: space-between;
+    /* 양쪽정렬 */
+    align-items: center;
+    /* 교차축 가운데 */
 }
+
 nav i {
     color: #fff;
-    font-size: var(--h3-font-size);/*아이콘 크기 크게*/
+    font-size: var(--h3-font-size);
+    /*아이콘 크기 크게*/
 }
+
 .nav-toggle {
-    display: none;/*안 보이게 하자*/
+    display: none;
+    /*안 보이게 하자*/
 }
+
 .nav-list {
-    display: flex;/*기본값 : 수평방향*/
+    display: flex;
+    /*기본값 : 수평방향*/
     column-gap: 1.25rem;
 }
+
 .nav-link {
     color: #fff;
+}
+
+/*HOME*/
+main {
+    margin: 88px;
 }
 
 /* breakpoints */
 /* 2K & 4K */
 
 /* tablet 시험문제 max-width max는 최대 600안에서는 저걸 적용한다*/
-@media screen and (max-width: 600px){/* width가 600px 이하면 아래 css 적용*/
-    .nav-toggle{
+@media screen and (max-width: 600px) {
+
+    /* width가 600px 이하면 아래 css 적용*/
+    .nav-toggle {
         display: block;
         cursor: pointer;
-        position: absolute;/* (메뉴)위치 무시, 로고 가운데 정렬 */
+        position: absolute;
+        /* (메뉴)위치 무시, 로고 가운데 정렬 */
     }
-    .nav-logo{
-        margin: 0 auto;/* 로고 가운데 정렬 */
+
+    .nav-logo {
+        margin: 0 auto;
+        /* 로고 가운데 정렬 */
     }
-    .nav-list{
+
+    .nav-list {
         position: absolute;
         top: 44px;
         left: 0;
@@ -117,17 +154,25 @@ nav i {
         overflow: hidden;
         transition: 0.2s;
     }
-    .nav-item{
-        padding: .5rem 1rem;/* 위 오 아 왼*/
-        text-align: center;/*가운데 정렬*/
-        border-bottom: 2px solid white;/* 아래 선 */
+
+    .nav-item {
+        padding: .5rem 1rem;
+        /* 위 오 아 왼*/
+        text-align: center;
+        /*가운데 정렬*/
+        border-bottom: 2px solid white;
+        /* 아래 선 */
     }
-    .nav-link{
+
+    .nav-link {
         color: var(--title-color);
-        display: block; /* 링크의 너비: 컨텐츠 -> nav-item 만큼 늘리자 */
+        display: block;
+        /* 링크의 너비: 컨텐츠 -> nav-item 만큼 늘리자 */
     }
-    .show-menu{
+
+    .show-menu {
         height: 164px;
     }
 }
+
 /* mobile */
