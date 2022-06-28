@@ -11,5 +11,5 @@
 1. https://yejin213527.github.io/WSM/
 1. [링크문구](https://yejin213527.github.io/WSM/)
 1. 소스코드 > index.html > Go Live
-- ![태민](https://img.gqkorea.co.kr/gq/2016/09/style_57e8eb354ab86.jpg)
+- ![하정우](https://mblogthumb-phinf.pstatic.net/20160814_206/kazu20_1471161997481zsz11_JPEG/%C7%CF%C1%A4%BF%EC%B8%D4%B9%E6_10.jpg?type=w800)
 - ![그림](./img/plate.png)
