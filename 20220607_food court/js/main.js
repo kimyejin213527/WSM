@@ -25,10 +25,20 @@ const addNow = (homeCardId) => {
     var now = new Date();
     let hour = now.getHours();
     let minute = now.getMinutes();
-    hour = 4;
+    hour = 16;
     minute = 20;
-    console.log(hour, minute); // 14 25
-    index = 0;
+    // console.log(hour, minute); // 14 25
+    minute = hour * 60 + minute;
+    if (minute >= 17 * 60 + 50) {
+        index = 0;
+    } else if (13 * 60 <= minute) {
+        index = 2;
+    } else if (8 * 60 <= minute) {
+        index = 1;
+    } else {
+        index = 0;
+    }
+    console.log
 
     //homeCard에서 index번째 card에 now클래스 추가
     let card = homeCard.getElementsByClassName('card')[index];
